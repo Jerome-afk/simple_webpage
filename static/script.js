@@ -15,6 +15,7 @@ function renderTable() {
             <td>${student.reg}</td>
             <td>${student.phone}</td>
             <td>${student.school}</td>
+            <td>${student.date}</td>
             `;
         tableBody.appendChild(row);
     });
@@ -30,7 +31,8 @@ form.addEventListener('submit', function(e) {
         age: document.getElementById('age').value,
         reg: document.getElementById('reg').value.trim(),
         phone: document.getElementById('phone').value.trim(),
-        school: document.getElementById('school').value.trim()
+        school: document.getElementById('school').value.trim(),
+        date: new Date().toLocaleDateString()
     };
 
     students.push(student);
